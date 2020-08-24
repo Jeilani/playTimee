@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/playtimee/static/css/main.54bbebe7.chunk.css",
+    "main.js": "/playtimee/static/js/main.a1f60723.chunk.js",
+    "main.js.map": "/playtimee/static/js/main.a1f60723.chunk.js.map",
+    "runtime-main.js": "/playtimee/static/js/runtime-main.8e5f0acd.js",
+    "runtime-main.js.map": "/playtimee/static/js/runtime-main.8e5f0acd.js.map",
+    "static/css/2.bd6773e8.chunk.css": "/playtimee/static/css/2.bd6773e8.chunk.css",
+    "static/js/2.1b814ce5.chunk.js": "/playtimee/static/js/2.1b814ce5.chunk.js",
+    "static/js/2.1b814ce5.chunk.js.map": "/playtimee/static/js/2.1b814ce5.chunk.js.map",
+    "index.html": "/playtimee/index.html",
+    "precache-manifest.89e0459e8e5e4c04170b02ff30cee087.js": "/playtimee/precache-manifest.89e0459e8e5e4c04170b02ff30cee087.js",
+    "service-worker.js": "/playtimee/service-worker.js",
+    "static/css/2.bd6773e8.chunk.css.map": "/playtimee/static/css/2.bd6773e8.chunk.css.map",
+    "static/css/main.54bbebe7.chunk.css.map": "/playtimee/static/css/main.54bbebe7.chunk.css.map",
+    "static/js/2.1b814ce5.chunk.js.LICENSE.txt": "/playtimee/static/js/2.1b814ce5.chunk.js.LICENSE.txt",
+    "static/media/LoginScreen.css": "/playtimee/static/media/ParkBasketball.4f097d08.jpeg",
+    "static/media/baseball.svg": "/playtimee/static/media/baseball.7f3476c6.svg",
+    "static/media/PickSportPage.css": "/playtimee/static/media/soccercover.1769df76.jpeg",
+    "static/media/basketball.svg": "/playtimee/static/media/basketball.8ee12177.svg",
+    "static/media/dummy-headshot.jpg": "/playtimee/static/media/dummy-headshot.695bda45.jpg",
+    "static/media/football.svg": "/playtimee/static/media/football.805a60df.svg",
+    "static/media/soccer.svg": "/playtimee/static/media/soccer.e9e66d39.svg",
+    "static/media/tennis.svg": "/playtimee/static/media/tennis.e71c8176.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e5f0acd.js",
+    "static/css/2.bd6773e8.chunk.css",
+    "static/js/2.1b814ce5.chunk.js",
+    "static/css/main.54bbebe7.chunk.css",
+    "static/js/main.a1f60723.chunk.js"
+  ]
+}
