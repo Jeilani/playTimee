@@ -9,21 +9,9 @@ const App = () =>{
   const isLogged = useSelector(state=>state.isLogged)
   const isLoading = useSelector(state=>state.isLoading)
 
-    if (isLogged && !isLoading){
-      return (
-          <HomePage/>
-
-      )
-    }
-    else if (!isLogged && !isLoading) {
-      return (
-          <LoginScreen/>
-      )
-    } else {
-        return (
-          <Loading/>
-        )
-    }
+    if (isLogged && !isLoading) return <HomePage/>
+    if (!isLogged && !isLoading) return <LoginScreen/>
+    if (isLoading) return <Loading/>
 }
 
 export default App;

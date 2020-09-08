@@ -1,7 +1,7 @@
 import {combineReducers} from "redux"
 import { initialGamesScheduled, friendsAPI, userProfileAPI } from "../DummyData"
 
-const isLogged = (state = true, action) => {
+const isLogged = (state = false, action) => {
     switch (action.type) {
       case 'LOGIN':
         return true
@@ -23,7 +23,7 @@ const isLoading = (state = false, action) => {
     }
 }
 
-const whichHomePage = (state = "setup", action) => {
+const whichHomePage = (state = "schedule", action) => {
     switch (action.type){
         case "friends":
             return "friends"
@@ -37,6 +37,8 @@ const whichHomePage = (state = "setup", action) => {
             return "loadinghomepage"
         case "search":
             return "search"
+        case "userpage":
+            return "userpage"
         default:
             return state
 
@@ -137,7 +139,7 @@ const whichMapDate = (state = "all", action) =>{
     }
 }
 
-const userProfile = (state = userProfileAPI, action) => {
+const currentUser = (state = userProfileAPI, action) => {
     switch (action.type){
         case "USER_LOGIN":
             return action.payload
@@ -148,8 +150,19 @@ const userProfile = (state = userProfileAPI, action) => {
     }
 }
 
+const selectedUserProfile = (state = null, action) => {
+    switch(action.type){
+        case "CHANGE_USER":
+            return action.payload
+        case "REMOVE_USER":
+            return null
+        default:
+            return state
+    }
+}
+
 const allReducers = combineReducers({
-    userProfile,
+    currentUser,
     isLoading,
     isLogged,
     whichHomePage,
@@ -160,7 +173,8 @@ const allReducers = combineReducers({
     selectedPark,
     parkDate,
     isMapConfirmation,
-    whichMapDate
+    whichMapDate,
+    selectedUserProfile
 })
 
 export default allReducers

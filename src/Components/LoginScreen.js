@@ -1,7 +1,6 @@
 import React from "react"
 import "../CSS/LoginScreen.css"
 import "../CSS/App.css"
-import { Button } from "react-bootstrap"
 import { useDispatch } from "react-redux"
 import { login, startLoading, stopLoading } from "../actions"
 
@@ -48,7 +47,7 @@ const LoginScreen = () => {
                 onChange={onPasswordChange}
                 value={password}
                 ></input>
-                <Button className="loginbutton" type="submit" onClick={letLoadLogin} variant="warning">Login</Button>{' '}
+               <button onClick={letLoadLogin}className="loginbutton" type="submit" variant="warning">Login</button>
             </form>
         </div>
     )

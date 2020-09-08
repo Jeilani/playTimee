@@ -1,97 +1,68 @@
-import React from "react"
+import React, {useState} from "react"
 import "../CSS/HomePage.css"
 import PickSportPage from "./HomePageSub/PickSportPage"
 import FriendsPage from "./HomePageSub/FriendsPage"
-import { useDispatch, useSelector } from "react-redux"
-import { logout, startLoading, stopLoading, reloadGames } from "../actions"
+import {useSelector, useDispatch } from "react-redux"
 import GamesScheduled from "./HomePageSub/GamesScheduled"
 import Timeline from "./HomePageSub/Timeline"
 import SearchFriendsPage from "./HomePageSub/SearchFriendsPage.js"
-
+import UserPage from "./HomePageSub/UserPage"
+import {Link, BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import Loading from "./Loading"
 
 const HomePage = () => {
-    const whichPage = useSelector(state => state.whichHomePage)
-    const gamesScheduled = useSelector(state=> state.gamesScheduled)
-    const userHeadshot = useSelector(state=>state.userProfile.profilePhoto)
+    const userHeadshot = useSelector(state=>state.currentUser.picture.large)
     const dispatch = useDispatch()
-
-    const letLoadLogout = event => {
-        event.preventDefault()
-        dispatch(startLoading())
-        setTimeout(()=>{
-          Logout()
-        }, 200)
-    }
-
-    const Logout = () => {
-        dispatch(logout())
-        dispatch(stopLoading())
-    }
-
-    const addToGames = game => {
-        dispatch(reloadGames(game))
-    }
-
+    const [isLoading, setIsLoading] = useState(false)
 
     const renderMainContent = () => {
-        switch(whichPage) {
-            case "friends":
+        if (isLoading) return <Loading/>
+        else {
             return (
-                <FriendsPage gamesScheduled={gamesScheduled}/>
-            )
-            case "setup":
-            return (
-                <PickSportPage changeMainContent={changeMainContent} addToGames={addToGames} gamesScheduled={gamesScheduled}/>
-            )
-            case "schedule":
-                return (
-                <GamesScheduled/>
-                )
-            case "timeline":
-                return (
-                <Timeline/>
-                )
-            case "loadinghomepage":
-                return (
-                <div className="homeloadingiconcontainer">
-                    <i className="homeloadingicon fas fa-circle-notch fa-4x"></i>
-                </div>
-                )
-            case "search":
-                return (
-                    <SearchFriendsPage/>
-                )
-            default:
-            return (
-                <div>Home Page</div>
+            <Switch>
+                <Route path="/friends" component={FriendsPage}></Route>
+                <Route path="/picksport" component={PickSportPage}></Route>
+                <Route path="/gamesscheduled" component={GamesScheduled}></Route>
+                <Route path="/searchfriends" component={SearchFriendsPage}></Route>
+                <Route path="/timeline" component={Timeline}></Route>
+                <Route path="/user/:id" component={UserPage}></Route>
+            </Switch>
             )
         }
-
     }
 
-    const changeMainContent = pageTitle => {
-        dispatch({type:"loadinghomepage"})
+    const letLoad = () => {
+        setIsLoading(true)
         setTimeout(()=>{
-            dispatch({type: pageTitle})
+            setIsLoading(false)
         }, 200)
-    }
+      }
 
+    const appLogout = () => {
+        dispatch({type:"STARTLOADING"})
+        setTimeout(()=>{
+            dispatch({type: "STOPLOADING"})
+            dispatch({type:"LOGOUT"})
+        }, 250)
+    }
     return (
+        <Router>
             <div className="HomePage">
                 <div className="navigationsidebar">
                     <img className="profileimage" alt="Profile headshot" src={userHeadshot}></img>
-                    <li onClick={()=>{changeMainContent("search")}}><i className="fas fa-search"></i><span className="wordicon">Search</span></li>
-                    <li onClick={()=>{changeMainContent("timeline")}}><i className="fas fa-stream"></i><span className="wordicon">Timeline</span></li>
-                    <li onClick={()=>{changeMainContent("friends")}}><i className="fas fa-user-friends"></i><span className="wordicon">Friends</span></li>
-                    <li onClick = {()=>{changeMainContent("setup")}}><i className="fas fa-location-arrow"></i><span className="wordicon">Set Up</span></li>
-                    <li onClick={()=>{changeMainContent("schedule")}}><i className="fas fa-calendar-alt"></i><span className="wordicon">Schedule</span></li>
-                    <li onClick={letLoadLogout}><i className="fas fa-sign-out-alt" ></i><span className="wordicon">Logout</span></li>
+                    <Link onClick={()=>{letLoad()}} to="/searchfriends" className="linkbutton"><li><i className="fas fa-search"></i><span className="wordicon">Search</span></li></Link>
+                    <Link onClick={()=>{letLoad()}} to="/timeline" className="linkbutton"><li><i className="fas fa-stream"></i><span className="wordicon">Timeline</span></li></Link>
+                    <Link onClick={()=>{letLoad()}} to="/friends" className="linkbutton"><li><i className="fas fa-user-friends"></i><span className="wordicon">Friends</span></li></Link>
+                    <Link onClick={()=>{letLoad()}} to="/picksport" className="linkbutton"><li><i className="fas fa-location-arrow"></i><span className="wordicon">Set Up</span></li></Link>
+                    <Link onClick={()=>{letLoad()}} to="gamesscheduled" className="linkbutton"><li><i className="fas fa-calendar-alt"></i><span className="wordicon">Schedule</span></li></Link>
+                    <Link onClick={()=>{appLogout()}} className="linkbutton"><li> <i className="fas fa-sign-out-alt" ></i><span className="wordicon">Logout</span></li></Link>
                 </div>
                 <div className="maincontent">
                     {renderMainContent()}
                 </div>
             </div>
-        )
+        </Router>
+    )
 }
 
 
