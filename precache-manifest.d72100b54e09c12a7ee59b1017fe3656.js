@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db4a927012e2b0c625ec49bcd2f566e6",
+    "revision": "8ad29dc06b04e57ae8f3803a56c2cd5f",
     "url": "/playTimee/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/playTimee/static/css/2.e055089f.chunk.css"
   },
   {
-    "revision": "9710f1fc088a69f528d8",
-    "url": "/playTimee/static/css/main.25c3da5b.chunk.css"
+    "revision": "265bf9fccc9e1ed90bb4",
+    "url": "/playTimee/static/css/main.6ec76c3c.chunk.css"
   },
   {
     "revision": "044cac28294e9fa5f8a2",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/playTimee/static/js/2.cbc3d2b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9710f1fc088a69f528d8",
+    "revision": "265bf9fccc9e1ed90bb4",
     "url": "/playTimee/static/js/main.6e9413fb.chunk.js"
   },
   {
