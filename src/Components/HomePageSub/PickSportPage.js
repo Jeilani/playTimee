@@ -2,6 +2,7 @@ import React from "react"
 import "../../CSS/PickSportPage.css"
 import LocateGame from "./PickSportSub/LocateGame"
 import {useSelector, useDispatch} from "react-redux"
+import "../../CSS/PickSportPage.css"
 
 const PickSportPage = () => {
     const pickedSport = useSelector(state=>state.isPickedSport)
