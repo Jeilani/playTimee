@@ -50,6 +50,10 @@
         transition-duration: .75s;
     }
 
+    .navigationsidebar .selectedoption{
+        color: rgb(2, 105, 173)
+    }
+
     .wordicon{
         margin-left: 10px;
     }
@@ -102,5 +106,9 @@
     }
     .profileimage{
         width: 50px;
+    }
+    .navigationsidebar .linkbutton:hover {
+        transform: translateX(0);
+        transition-duration: 0s;
     }
 }

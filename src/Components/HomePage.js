@@ -14,6 +14,9 @@ const HomePage = () => {
     const userHeadshot = useSelector(state=>state.currentUser.picture.large)
     const dispatch = useDispatch()
     const [isLoading, setIsLoading] = useState(false)
+    const [selectedOption, setSelectedOption] = useState(null)
+
+    const isSelected = whichOption => whichOption === selectedOption ? true:false
 
     const renderMainContent = () => {
         if (isLoading) return <Loading/>
@@ -50,11 +53,11 @@ const HomePage = () => {
             <div className="HomePage">
                 <div className="navigationsidebar">
                     <img className="profileimage" alt="Profile headshot" src={userHeadshot}></img>
-                    <Link onClick={()=>{letLoad()}} to="/searchfriends" className="linkbutton"><li><i className="fas fa-search"></i><span className="wordicon">Search</span></li></Link>
-                    <Link onClick={()=>{letLoad()}} to="/timeline" className="linkbutton"><li><i className="fas fa-stream"></i><span className="wordicon">Timeline</span></li></Link>
-                    <Link onClick={()=>{letLoad()}} to="/friends" className="linkbutton"><li><i className="fas fa-user-friends"></i><span className="wordicon">Friends</span></li></Link>
-                    <Link onClick={()=>{letLoad()}} to="/picksport" className="linkbutton"><li><i className="fas fa-location-arrow"></i><span className="wordicon">Set Up</span></li></Link>
-                    <Link onClick={()=>{letLoad()}} to="gamesscheduled" className="linkbutton"><li><i className="fas fa-calendar-alt"></i><span className="wordicon">Schedule</span></li></Link>
+                    <Link onClick={()=>{letLoad(); setSelectedOption("search")}} to="/searchfriends" className={`linkbutton ${isSelected("search")?'selectedoption':null}`}><li><i className="fas fa-search"></i><span className="wordicon">Search</span></li></Link>
+                    <Link onClick={()=>{letLoad(); setSelectedOption("timeline")}} to="/timeline" className={`linkbutton ${isSelected("timeline")?'selectedoption':null}`}><li><i className="fas fa-stream"></i><span className="wordicon">Timeline</span></li></Link>
+                    <Link onClick={()=>{letLoad(); setSelectedOption("friends")}} to="/friends" className={`linkbutton ${isSelected("friends")?'selectedoption':null}`}><li><i className="fas fa-user-friends"></i><span className="wordicon">Friends</span></li></Link>
+                    <Link onClick={()=>{letLoad(); setSelectedOption("picksport")}} to="/picksport" className={`linkbutton ${isSelected("picksport")?'selectedoption':null}`}><li><i className="fas fa-location-arrow"></i><span className="wordicon">Set Up</span></li></Link>
+                    <Link onClick={()=>{letLoad(); setSelectedOption("gamesscheduled")}} to="gamesscheduled" className={`linkbutton ${isSelected("gamesscheduled")?'selectedoption':null}`}><li><i className="fas fa-calendar-alt"></i><span className="wordicon">Schedule</span></li></Link>
                     <Link onClick={()=>{appLogout()}} className="linkbutton"><li> <i className="fas fa-sign-out-alt" ></i><span className="wordicon">Logout</span></li></Link>
                 </div>
                 <div className="maincontent">
