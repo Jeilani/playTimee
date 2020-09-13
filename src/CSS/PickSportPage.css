@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 7%;
+    height: 100%;
+    width: 100%;
 
 }
     .sports{
@@ -47,3 +49,13 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+@media only screen and (max-width: 700px) {
+    .sports{
+        display: flex;
+        min-width: 90%;
+        height: 250px;
+        margin: 20px;
+        opacity: 100%;
+    }
+}
