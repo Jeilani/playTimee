@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 7%;
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
 
@@ -12,7 +13,6 @@
         min-width: 400px;
         height: 250px;
         margin: 20px;
-
     }
     .whichsportgs{
         display: flex;
@@ -69,3 +69,12 @@
             display: flex;
 
         }
+
+@media only screen and (max-width: 700px) {
+    .activitycontainer{
+        display: flex;
+        min-width: 90%;
+        height: 250px;
+        margin: 20px;
+    }
+}
