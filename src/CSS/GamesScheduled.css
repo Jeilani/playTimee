@@ -63,10 +63,8 @@
         text-align:center;
     }
         .individualgame:hover{
-            opacity: 100%;
             transition-duration: .5s;
             display: flex;
-
         }
 
 @media only screen and (max-width: 700px) {
