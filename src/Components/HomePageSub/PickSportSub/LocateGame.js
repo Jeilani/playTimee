@@ -27,14 +27,14 @@ const LocateGame = () => {
       position: "absolute",
       top: "0",
       left: "0",
-      width: '100vw',
-      height: '80vh'}
+      width: '100%',
+      height: '100%'}
     } else {containerStyle = {
     position: "absolute",
     top: "0",
     left: "20vw",
-    width: '80vw',
-    height: '100vh'
+    width: '80%',
+    height: '100%'
   }}
   const dispatch = useDispatch()
   const gamesScheduled = useSelector(state=>state.gamesScheduled)
