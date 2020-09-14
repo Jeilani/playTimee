@@ -47,7 +47,6 @@ const LocateGame = () => {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
     libraries: places,
   });
-
   const relocate = () => {
     navigator.geolocation.getCurrentPosition(position=>{
       map.panTo(
@@ -195,10 +194,19 @@ const LocateGame = () => {
     }
   }
 
+  const renderDateButton = () =>{
+    if (window.innerWidth < 1000) {
+      return (
+          <i className="fas datecirclebutton fa-calendar-week"></i>
+      )
+    }
+  }
+
   if (loadError) return "Error";
   if (!isLoaded) { return (<div className="maploadingiconcontainer"> <i className="maploadingicon fas fa-circle-notch fa-4x"></i></div>)}
   return (<div className="mapmain">
             <Sidebar/>
+            {renderDateButton()}
             <Search panTo = {panTo} />
             <GoogleMap
               mapContainerStyle={containerStyle}

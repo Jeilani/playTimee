@@ -84,6 +84,21 @@
         animation-timing-function: linear;
     }
 
+.datecirclebutton{
+    position: absolute;
+    top: 50vh;
+    left: 10px;
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border: 1px solid black;
+}
+
 @-webkit-keyframes rotate {
     from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
     to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
@@ -111,5 +126,11 @@
         left: 0;
         width: 100vw;
         height: 80vh;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .datecirclebutton{
+        display: none;
     }
 }
