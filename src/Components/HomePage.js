@@ -24,6 +24,7 @@ const HomePage = () => {
             return (
             <Switch>
                 <Route path="/" exact component={PickSportPage}></Route>
+                <Route path="/playTimee" exact component={PickSportPage}></Route>
                 <Route path="/friends" component={FriendsPage}></Route>
                 <Route path="/picksport" component={PickSportPage}></Route>
                 <Route path="/gamesscheduled" component={GamesScheduled}></Route>
