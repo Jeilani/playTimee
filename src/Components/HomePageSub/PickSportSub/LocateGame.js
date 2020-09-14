@@ -43,6 +43,7 @@ const LocateGame = () => {
   const [markerInfo, setMarkerInfo] = useState(null)
   const [isMarkerClicked, setIsMarkerClicked] = useState(false)
   const [map, setMap] = useState(null)
+  const [isFullDatePicker, setIsFullDatePicker] = useState(false)
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
     libraries: places,
@@ -197,7 +198,7 @@ const LocateGame = () => {
   const renderDateButton = () =>{
     if (window.innerWidth < 1000) {
       return (
-          <i className="fas datecirclebutton fa-calendar-week"></i>
+          <i onClick={()=>{setIsFullDatePicker(true)}} className="fas datecirclebutton fa-calendar-week"></i>
       )
     }
   }
@@ -205,7 +206,7 @@ const LocateGame = () => {
   if (loadError) return "Error";
   if (!isLoaded) { return (<div className="maploadingiconcontainer"> <i className="maploadingicon fas fa-circle-notch fa-4x"></i></div>)}
   return (<div className="mapmain">
-            <Sidebar/>
+            <Sidebar isFullDatePicker={isFullDatePicker} setIsFullDatePicker={setIsFullDatePicker}/>
             {renderDateButton()}
             <Search panTo = {panTo} />
             <GoogleMap

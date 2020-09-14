@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/playTimee/precache-manifest.e034bc0253e6048bba01f58fa836efa6.js"
+  "/playTimee/precache-manifest.89c17d0df6ddfb69218783393263b7cf.js"
 );
 
 self.addEventListener('message', (event) => {
