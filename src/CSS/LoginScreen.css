@@ -57,23 +57,14 @@
     border: 0;
     height: 20px;
     border-radius: 2px;
-    -webkit-transition-duration: 0.5s;
-         -o-transition-duration: 0.5s;
-            transition-duration: 0.5s;
 }
 
-input:hover{
-    opacity: 100%;
-    -webkit-transition-duration: 0.5s;
-         -o-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-}
 
 .loginbutton{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: rgb(235, 188, 118), .5;
+    background-color: rgb(235, 188, 118);
     border-radius: 2px;
     padding: 5px;
     border: none;
@@ -81,15 +72,6 @@ input:hover{
         -ms-flex-pack: center;
             justify-content: center;
 }
-
-.loginbutton:hover {
-    -webkit-transition-duration: .5s;
-         -o-transition-duration: .5s;
-            transition-duration: .5s;
-    background-color: rgb(235, 188, 118);
-    color: gray;
-}
-
 a:active{
     text-decoration: none;
 }
