@@ -19,10 +19,6 @@
         color: white;
         font-size: 1.1rem;
     }
-        .sports:hover{
-            opacity: 100%;
-            transition-duration: .5s;
-        }
         .basketball{
             background: url("../images/basketballcover2.jpeg");
             background-repeat: no-repeat;
