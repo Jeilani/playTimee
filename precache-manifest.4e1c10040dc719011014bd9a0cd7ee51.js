@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf5aee5ce91d2ebd102c5aba0385ee8b",
+    "revision": "37a4ad72f32c909a1aa77d3e6361716a",
     "url": "/playTimee/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/playTimee/static/css/2.e055089f.chunk.css"
   },
   {
-    "revision": "039e9acb8b71f61c7c63",
-    "url": "/playTimee/static/css/main.182cc4cc.chunk.css"
+    "revision": "d5544824b99cd5b8b2c5",
+    "url": "/playTimee/static/css/main.595e4059.chunk.css"
   },
   {
     "revision": "326d1e392c42fa2d9679",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/playTimee/static/js/2.14eab130.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "039e9acb8b71f61c7c63",
+    "revision": "d5544824b99cd5b8b2c5",
     "url": "/playTimee/static/js/main.f6c7cf1d.chunk.js"
   },
   {
@@ -62,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "87d9e26906c3bdd4d02df38474c5cebb",
     "url": "/playTimee/static/media/hikingcover.87d9e269.jpeg"
+  },
+  {
+    "revision": "d7e1d5361f4512e990dd09ec167b5da0",
+    "url": "/playTimee/static/media/smallscreenlogin.d7e1d536.jpeg"
   },
   {
     "revision": "e9e66d39fda37586e0e628cccc5efa32",
