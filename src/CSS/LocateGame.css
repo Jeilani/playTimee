@@ -20,8 +20,8 @@
 }
 .chosendateee{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 45vh;
+    right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
