@@ -8,7 +8,6 @@ import Timeline from "./HomePageSub/Timeline"
 import SearchFriendsPage from "./HomePageSub/SearchFriendsPage.js"
 import UserPage from "./HomePageSub/UserPage"
 import {Link, BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import Loading from "./Loading"
 
 const HomePage = () => {
     const userHeadshot = useSelector(state=>state.currentUser.picture.large)
@@ -19,7 +18,7 @@ const HomePage = () => {
     const isSelected = whichOption => whichOption === selectedOption ? true:false
 
     const renderMainContent = () => {
-        if (isLoading) return <Loading/>
+        if (isLoading) return         <div className="homeloadingcontainer"><i className="loadingicon fas fa-circle-notch fa-4x"></i></div>
         else {
             return (
             <Switch>

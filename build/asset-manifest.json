@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/playTimee/static/css/main.104f868a.chunk.css",
+    "main.css": "/playTimee/static/css/main.37698b49.chunk.css",
     "main.js": "/playTimee/static/js/main.d3e0c08a.chunk.js",
     "main.js.map": "/playTimee/static/js/main.d3e0c08a.chunk.js.map",
     "runtime-main.js": "/playTimee/static/js/runtime-main.23196ec2.js",
@@ -9,10 +9,10 @@
     "static/js/2.14eab130.chunk.js": "/playTimee/static/js/2.14eab130.chunk.js",
     "static/js/2.14eab130.chunk.js.map": "/playTimee/static/js/2.14eab130.chunk.js.map",
     "index.html": "/playTimee/index.html",
-    "precache-manifest.6a6600b36eed9a4518ce46b5e821d9bc.js": "/playTimee/precache-manifest.6a6600b36eed9a4518ce46b5e821d9bc.js",
+    "precache-manifest.48fc808e61a3eda33b91fa2d3dde948f.js": "/playTimee/precache-manifest.48fc808e61a3eda33b91fa2d3dde948f.js",
     "service-worker.js": "/playTimee/service-worker.js",
     "static/css/2.e055089f.chunk.css.map": "/playTimee/static/css/2.e055089f.chunk.css.map",
-    "static/css/main.104f868a.chunk.css.map": "/playTimee/static/css/main.104f868a.chunk.css.map",
+    "static/css/main.37698b49.chunk.css.map": "/playTimee/static/css/main.37698b49.chunk.css.map",
     "static/js/2.14eab130.chunk.js.LICENSE.txt": "/playTimee/static/js/2.14eab130.chunk.js.LICENSE.txt",
     "static/media/LoginScreen.css": "/playTimee/static/media/smallscreenlogin.d7e1d536.jpeg",
     "static/media/baseball.svg": "/playTimee/static/media/baseball.7f3476c6.svg",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.23196ec2.js",
     "static/css/2.e055089f.chunk.css",
     "static/js/2.14eab130.chunk.js",
-    "static/css/main.104f868a.chunk.css",
+    "static/css/main.37698b49.chunk.css",
     "static/js/main.d3e0c08a.chunk.js"
   ]
 }
