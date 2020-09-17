@@ -40,7 +40,8 @@
 
 @media only screen and (max-width: 900px) {
     .timelinepage{
-        font-size: .7rem;
+        font-size: .5rem;
+        color: rgb(175, 175, 175)
     }
         .timelinepage img{
             margin-right: 10px;
@@ -48,5 +49,8 @@
 
     .timelineactions{
         width: 90%;
+    }
+    .timelinepicture{
+        width: 25px;
     }
 }

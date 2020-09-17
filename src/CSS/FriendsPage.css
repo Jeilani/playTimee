@@ -8,6 +8,10 @@
     padding: 5% 15%;
     box-sizing:border-box;
     font-size: 1rem;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    padding-top: 10vh;
 }
 
     .friendslistcontainer{
