@@ -8,12 +8,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .LoginScreen{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background: url("../images/ParkBasketball.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) ), url('../images/ParkBasketball.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     display: -webkit-box;
@@ -35,8 +35,8 @@
 
 .LoginScreen h1, .LoginScreen h2 {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .LoginScreen form{
@@ -49,14 +49,16 @@
             flex-direction: column;
 }
 .LoginScreen input{
-    margin: 5px;
-}
-
-.LoginScreen input{
     border: 0;
     height: 20px;
     border-radius: 2px;
+    margin: 5px;
+    background-color: rgba(256, 256, 256, .4);
+    color: white;
 }
+    .LoginScreen input, select, textarea{
+        color: white;
+    }
 
 
 .loginbutton{
@@ -80,8 +82,8 @@ a:active{
         width: 100%;
         height: 100%;
         margin: 0;
-        padding: 0;
-        background: url("../images/smallscreenlogin.jpeg");
+        padding: 0, 10px;
+        background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) ), url('../images/smallscreenlogin.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
         display: -webkit-box;
@@ -103,9 +105,9 @@ a:active{
 
     .LoginScreen h2 {
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.4);
         border-radius: 5px;
         font-size: 1rem;
+        margin: 0 10px;
     }
 
 }

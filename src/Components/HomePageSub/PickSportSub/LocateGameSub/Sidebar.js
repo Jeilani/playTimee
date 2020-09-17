@@ -14,7 +14,7 @@ const Sidebar = ({isFullDatePicker, setIsFullDatePicker}) => {
           <div className="smallscreensidebardiv">
             <p>You are setting up a {sportPicked.toLowerCase()} activity</p>
             <p>Search a park or look for one near you on the map</p>
-            <p>Pick a date to view or set up an activity</p>
+            <p>Pick a date to view or set up an activity. Leave it on the week setting to view all games set for the week.</p>
             <Dates/>
             <i onClick={()=>{setIsFullDatePicker(false)}} className="fas fa-3x finishedbutton fa-check-circle"></i>
           </div>

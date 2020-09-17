@@ -26,10 +26,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 50px;
+    min-width: 6vh;
     border-radius: 50%;
     font-size: .5rem;
-    height: 50px;
+    height: 6vh;
     padding: 10px;
     transition-duration: .5s;
     background-color: rgb(209, 209, 209);

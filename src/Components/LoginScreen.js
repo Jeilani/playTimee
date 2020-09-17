@@ -4,7 +4,6 @@ import "../CSS/App.css"
 import { useDispatch } from "react-redux"
 import { login, startLoading, stopLoading } from "../actions"
 
-
 const LoginScreen = () => {
     const [username, setUsername] = React.useState("")
     const [password, setPassword] = React.useState("")
@@ -32,11 +31,12 @@ const LoginScreen = () => {
         dispatch(stopLoading())
     }
 
+
     return (
         <div className="LoginScreen">
             <i className="fas fa-clock fa-3x"></i>
             <h1>Welcome to playTime</h1>
-            <h2>Pick your sport, your location and setup a <br></br>fun game with friends, strangers and other playTime users 7even days in advance</h2>
+            <h2>Pick your sport, your location and setup a <br></br>fun game with friends, strangers and other playTime users seven days in advance</h2>
             <form onSubmit={letLoadLogin}>
                 <input
                 placeholder="Username"

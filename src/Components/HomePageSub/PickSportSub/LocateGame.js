@@ -43,7 +43,7 @@ const LocateGame = () => {
   const [markerInfo, setMarkerInfo] = useState(null)
   const [isMarkerClicked, setIsMarkerClicked] = useState(false)
   const [map, setMap] = useState(null)
-  const [isFullDatePicker, setIsFullDatePicker] = useState(false)
+  const [isFullDatePicker, setIsFullDatePicker] = useState(true)
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
     libraries: places,
