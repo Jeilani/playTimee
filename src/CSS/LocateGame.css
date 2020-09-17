@@ -1,7 +1,7 @@
 .backarrow{
     position: absolute;
     top: 2vh;
-    left: 0;
+    left: 10px;
     transition-duration: 1s;
 }
 

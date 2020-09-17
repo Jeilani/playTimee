@@ -79,6 +79,8 @@ const sportPicked = (state = "", action) => {
             return "Hiking"
         case "Baseball":
             return "Baseball"
+        case "Tennis":
+            return "Tennis"
         case "NO_SPORT_PICKED":
             return ""
         default:

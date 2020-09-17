@@ -35,6 +35,9 @@ const PickSportPage = () => {
             <div className="sports baseball" onClick={()=>{changeSportPicked("Baseball")}}>
                 <p>Baseball</p>
             </div>
+            <div className="sports tennis" onClick={()=>{changeSportPicked("Tennis")}}>
+                <p>Tennis</p>
+            </div>
         </div>
         )
     }

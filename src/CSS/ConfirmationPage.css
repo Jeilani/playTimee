@@ -10,6 +10,7 @@
     align-items: center;
     overflow-y: scroll;
     z-index: 30;
+    text-align: center;
 }
     .mapconfirmationcontainer .fa-times-circle{
         position: absolute;

@@ -7,6 +7,7 @@ import soccericon from "../../../images/soccer.svg"
 import footballicon from "../../../images/football.svg"
 import tennisicon from "../../../images/tennis.svg"
 import baseballicon from "../../../images/baseball.svg"
+import hikingicon from "../../../images/hiking.svg"
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedPark } from "../../../actions"
 import Sidebar from "./LocateGameSub/Sidebar"
@@ -134,10 +135,13 @@ const LocateGame = () => {
           icon = soccericon
           break;
         case "Hiking":
-          icon = tennisicon
+          icon = hikingicon
           break;
         case "Baseball":
           icon = baseballicon
+          break
+        case "Tennis":
+          icon = tennisicon
           break
         default:
           return null;
@@ -169,10 +173,13 @@ const LocateGame = () => {
                     icon = soccericon
                     break;
                   case "Hiking":
-                    icon = tennisicon
+                    icon = hikingicon
                     break;
                   case "Baseball":
                     icon = baseballicon
+                    break
+                  case "Tennis":
+                    icon = tennisicon
                     break
                   default:
                     return null;
