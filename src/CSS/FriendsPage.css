@@ -16,6 +16,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+        margin-top: 30px;
     }
 .friendspagecontainer img {
     border-radius: 50%;
@@ -188,4 +189,8 @@
         .friendpopup{
             width: 90vw;
         }
+        .friendspagecontainer img:hover{
+            transform: scale(1);
+        }
+
 }

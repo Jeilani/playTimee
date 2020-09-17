@@ -18,6 +18,32 @@
     flex-direction: column;
     align-items: center;
 }
+.chosendateee{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 6vh;
+    border-radius: 50%;
+    font-size: .5rem;
+    height: 6vh;
+    padding: 10px;
+    transition-duration: .5s;
+    background-color: rgb(209, 209, 209);
+    z-index: 2;
+}
+    .chosendateee.day{
+        font-size: 8px;
+        font-weight: bold;
+    }
+    .chosendateee .datenumber{
+        color: red;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
 
 
     .infowindow p {
@@ -119,7 +145,7 @@
 
 .datecirclebutton{
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     left: 10px;
     display: flex;
     background-color: white;
@@ -149,9 +175,10 @@
 
     .backarrow{
         position: absolute;
-        top: 5px;
-        left: 0;
+        top: 70%;
+        left: 5px;
         transition-duration: 1s;
+        font-size: 3.5rem;
     }
     .actualmap{
         position: absolute;

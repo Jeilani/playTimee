@@ -12,7 +12,7 @@ const MarkerPopUp = ({setIsMarkerClicked, markerInfo, setMarkerInfo}) =>{
     const hour = markerInfo.date.getHours()
     const minutes = markerInfo.date.getMinutes()
     const friendsAttending = markerInfo.friendsInvited.map(eachUser=>{
-        return (<div><img alt="user" className="userpic" src={eachUser.picture.large}></img> {eachUser.name.first} {eachUser.name.last}</div>)
+        return (<div className="eachuserattending"><img alt="user" className="userpic" src={eachUser.picture.large}></img> {eachUser.name.first} {eachUser.name.last}</div>)
     })
     const isCurrentUserAdmin = () => {
         if (markerInfo.gameAdmin === currentUser.login.uuid){
@@ -41,7 +41,7 @@ const MarkerPopUp = ({setIsMarkerClicked, markerInfo, setMarkerInfo}) =>{
             return <h5>There are currently no other users attending this activity</h5>
         } else {
             return (
-                <div>
+                <div className="usersattending">
                     <h5>Users Attending</h5>
                     <div>{friendsAttending}</div>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "../../../CSS/LocateGame.css"
 import { GoogleMap, useLoadScript, Marker} from '@react-google-maps/api';
 import Search from "./Search"
@@ -12,7 +12,7 @@ import { setSelectedPark } from "../../../actions"
 import Sidebar from "./LocateGameSub/Sidebar"
 import ConfirmationPage from "./LocateGameSub/ConfirmationPage"
 import MarkerPopUp from "./LocateGameSub/MarkerPopUp"
-
+import {renderMonth, renderWeekday} from "../../../functions"
 const places = ["places"];
 
 const options = {
@@ -43,7 +43,7 @@ const LocateGame = () => {
   const [markerInfo, setMarkerInfo] = useState(null)
   const [isMarkerClicked, setIsMarkerClicked] = useState(false)
   const [map, setMap] = useState(null)
-  const [isFullDatePicker, setIsFullDatePicker] = useState(true)
+  const [isFullDatePicker, setIsFullDatePicker] = useState(false)
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
     libraries: places,
@@ -195,10 +195,30 @@ const LocateGame = () => {
     }
   }
 
+  useEffect(() => {
+    if (window.innerWidth < 1000) {
+      setIsFullDatePicker(true)
+    }
+  }, [])
+
   const renderDateButton = () =>{
+    let renderFloatingDate = () => {
+      if (whichMapDate === "all") return (<div className="chosendateee">All Activities</div>)
+       else {
+        return (
+      <div className="chosendateee">
+        <span className="month">{renderMonth(whichMapDate.getMonth())} </span>
+        <span className="datenumber">{whichMapDate.getDate()}</span>
+        <span className="day">{renderWeekday(whichMapDate.getDay())} </span>
+      </div> )
+      }
+    }
     if (window.innerWidth < 1000) {
       return (
+        <div>
           <i onClick={()=>{setIsFullDatePicker(true)}} className="fas datecirclebutton fa-calendar-week"></i>
+          {renderFloatingDate()}
+        </div>
       )
     }
   }

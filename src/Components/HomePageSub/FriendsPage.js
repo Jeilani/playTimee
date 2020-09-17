@@ -18,7 +18,7 @@ const FriendsPage = props =>{
     } else {
         return (
             <div className="friendspagecontainer">
-                <h1>Click on friend to set up a game with them</h1>
+                <h1>Click on friend to invite</h1>
                 <div className="friendslistcontainer">
                     {friendsList.map((friend, index)=>{
                         return (
