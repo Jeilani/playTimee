@@ -13,7 +13,7 @@ const SearchFriendPage = () => {
         return searchValue === ""
     }
 
-    const searchResults = friendsList.filter(friend=>(friend.name.first.indexOf(searchValue) !== -1) || (friend.name.last.indexOf(searchValue) !== -1)).map(friend=>{
+    const searchResults = friendsList.filter(friend=>(friend.name.first.indexOf(searchValue.toLowerCase()) !== -1) || (friend.name.last.indexOf(searchValue) !== -1)).map(friend=>{
         return (
         <div onClick={()=>{dispatch({type: "CHANGE_USER", payload:friend}); dispatch({type:"SWITCH_TO_USER_PAGE"})}} className="individualresults"><img alt="friend" src={friend.picture.large}></img><span>{friend.name.first} {friend.name.last}</span></div>
             )
