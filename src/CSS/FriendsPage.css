@@ -192,5 +192,8 @@
         .friendspagecontainer img:hover{
             transform: scale(1);
         }
+        .friendpopupcontainer .eachgame{
+            font-size: .6rem;
+        }
 
 }

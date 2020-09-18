@@ -39,6 +39,10 @@
     font-weight: bold;
 }
 
+.LoginScreen h2{
+    margin-bottom: 30px;
+}
+
 .LoginScreen form{
     display: -webkit-box;
     display: -ms-flexbox;

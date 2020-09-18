@@ -36,7 +36,7 @@ const LoginScreen = () => {
         <div className="LoginScreen">
             <i className="fas fa-clock fa-3x"></i>
             <h1>Welcome to playTime</h1>
-            <h2>Pick your sport, your location and setup a <br></br>fun game with friends, strangers and other playTime users seven days in advance</h2>
+            <h2>Pick a park on the map to plan and join activities with friends, strangers and other playTime users up to seven days in advance!</h2>
             <form onSubmit={letLoadLogin}>
                 <input
                 placeholder="Username"
