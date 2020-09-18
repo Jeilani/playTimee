@@ -111,11 +111,9 @@
         width: 100%;
         margin: 5px;
         transition-duration: .5s;
+        justify-content: center;
+        align-items: center;
     }
-        .gamesscheduledcontainer .eachgame:hover{
-            background-color: rgba(87, 146, 235, 0.171);
-            transition-duration: .5s;
-        }
 
         .gamesscheduledcontainer .eachgamesport{
             color: blue;
@@ -193,7 +191,7 @@
             transform: scale(1);
         }
         .friendpopupcontainer .eachgame{
-            font-size: .6rem;
+            font-size: .5rem;
         }
 
 }
