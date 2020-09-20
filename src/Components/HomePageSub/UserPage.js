@@ -15,13 +15,13 @@ const UserPage = ({match}) => {
                 <i className="fas fa-plus"></i>
             </div>
             <div className="userpagemaincontent">
-                <div className="scorecontainer">playTime Score <span className="playtimescore">{Math.floor(Math.random() * 500) }</span></div>
+                <div className="scorecontainer"><span className="playtimescore">{Math.floor(Math.random() * 500) }</span></div>
                 <div className="userinformation">
                     <img alt="user profile" src={picture.large}></img>
                     <p>@{login.username}</p>
                     <h2>{name.first} {name.last}</h2>
                 </div>
-                <div className="scorecontainer">Games Setup <span className="gamessetupscore">{Math.floor(Math.random() * 5) }</span></div>
+                <div className="scorecontainer"><span className="gamessetupscore">{Math.floor(Math.random() * 5) }</span></div>
             </div>
             <i onClick={()=>{history.push("/searchfriends")}} className="userpagebackarrow fas fa-x fa-arrow-left"></i>
         </div>

@@ -13,6 +13,7 @@
     font-family: 'Quicksand', sans-serif;
     animation-name: pageload;
     animation-duration: .5s;
+    color: rgb(158, 160, 158);
 }
     .userpagecontainer .link{
         z-index: 3;
@@ -42,7 +43,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100vw;
+        width: 100%;
         height: 100%;
     }
         .userpagemaincontent img{
@@ -83,8 +84,8 @@
                 text-align: center;
             }
             .playtimescore{
-                border: 4px solid green;
-                color: green;
+                border: 4px solid rgb(111, 219, 111);
+                color: rgb(111, 219, 111);
             }
             .userinformation{
                 display: flex;
@@ -94,8 +95,8 @@
                 text-align: center;
             }
             .gamessetupscore{
-                border: 2px solid blue;
-                color: blue;
+                border: 4px solid rgb(77, 175, 255);
+                color: rgb(77, 175, 255);
             }
 .userpagebackarrow{
     position: absolute;
@@ -133,7 +134,7 @@
         flex-direction: row;
     }
     .userpagebackarrow{
-        top: 90%;
+        top: 75vh;
         left: 0;
         font-size: 3rem;
         z-index: 3;
