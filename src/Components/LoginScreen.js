@@ -46,6 +46,7 @@ const LoginScreen = () => {
                 placeholder="Password"
                 onChange={onPasswordChange}
                 value={password}
+                type="password"
                 ></input>
                <button onClick={letLoadLogin}className="loginbutton" type="submit" variant="warning">Login</button>
             </form>

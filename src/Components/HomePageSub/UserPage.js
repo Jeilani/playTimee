@@ -1,55 +1,29 @@
 import React from "react"
-import {useSelector, useDispatch } from "react-redux"
-import {renderDay, renderMonth } from "../../functions"
+import {useSelector} from "react-redux"
 import "../../CSS/UserPage.css"
+import { useHistory } from "react-router-dom"
 
 const UserPage = ({match}) => {
-    const dispatch = useDispatch()
     const userProfile = useSelector(state=>state.selectedUserProfile)
+    const history = useHistory()
     const {picture, name, login} = userProfile
-    const mapGamesScheduled = () => {
-        return userProfile.gamesScheduled.map((game, index) => {
-            const dayoftheweek = renderDay(game.date.getDay());
-            const date = game.date.getDate().toString();
-            const month = renderMonth(game.date.getMonth())
-            const year = game.date.getFullYear().toString();
-            return (
-            <div className="activitycontainer">
-                <div className="whichsportgs">
-                    {game.sport}
-                </div>
-                <div className="calendar">
-                    <p className="dayoftheweek">{dayoftheweek}</p>
-                    <p className="date">{month} {date}</p>
-                    <p className="year">{year}</p>
-                </div>
-                <div className="individualgame"
-                    style={{
-                        background: "url("+ game.photo + ")",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover"}}
-                    key={index} >
-                <p>{game.name}</p>
-                </div>
-            </div>)
-        })
-    }
-
 
     return (
         <div className="userpagecontainer">
             <div className="userpagesidebar">
-                <i class="fas fa-comment-alt"></i>
+                <i className="fas fa-comment-alt"></i>
                 <i className="fas fa-plus"></i>
             </div>
             <div className="userpagemaincontent">
-                <img alt="user profile" src={picture.large}></img>
-                <p>@{login.uuid}</p>
-                <h2>{name.first} {name.last}</h2>
-                <h1>Activities</h1>
-                {userProfile.gamesScheduled?mapGamesScheduled():<p>This user has no activities scheduled</p>}
+                <div className="scorecontainer">playTime Score <span className="playtimescore">{Math.floor(Math.random() * 500) }</span></div>
+                <div className="userinformation">
+                    <img alt="user profile" src={picture.large}></img>
+                    <p>@{login.username}</p>
+                    <h2>{name.first} {name.last}</h2>
+                </div>
+                <div className="scorecontainer">Games Setup <span className="gamessetupscore">{Math.floor(Math.random() * 5) }</span></div>
             </div>
-            <i onClick={()=>{dispatch({type: "SWITCH_TO_HOME_PAGE"})}} className="userpagebackarrow fas fa-2x fa-arrow-left"></i>
+            <i onClick={()=>{history.push("/searchfriends")}} className="userpagebackarrow fas fa-x fa-arrow-left"></i>
         </div>
     )
 }
