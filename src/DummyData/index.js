@@ -12,9 +12,9 @@ export const initialGamesScheduled =
         photo: "https://images.unsplash.com/photo-1585249167160-4665db9a7ed6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
         types: ["park", "point_of_interest", "establishment"],
         website: "https://sfrecpark.org/Facilities/Facility/Details/Twin-Peaks-384",
-        sport: "Basketball",
+        sport: "Hiking",
         friendsInvited: [],
-        openForInvite: true
+        openForInvite: false
     },
     {
         gameAdmin: "fsdakjfkasfsaddf23r2",
@@ -28,7 +28,45 @@ export const initialGamesScheduled =
         website: "http://sfrecpark.org/parks-open-spaces/golden-gate-park-guide/",
         sport: "Football",
         friendsInvited: [],
-        openForInvite: true
+        openForInvite: false
+},
+{
+        name:"Rocky Mountain National Park",
+        date: new Date (2020, 9, 3),
+        lat:40.34445080136368,
+        lng:-105.68572998046875,
+        photo:"https://images.unsplash.com/photo-1481858203162-e46b5e60dc0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
+        website:"http://www.nps.gov/romo/index.htm",
+        gameID:"_vbngwhegqhc",
+        openForInvite:false,
+        gameAdmin:"fsdakjfk23r2",
+        friendsInvited: [],
+        sport:"Hiking",
+},
+{
+        name:"Washington Park",
+        date: new Date (2020, 8, 29),
+        lat:39.70031906859748,
+        lng:-104.96406555175781,
+        photo:"https://images.unsplash.com/photo-1591628996689-a20ea1ae1ad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2475&q=80",
+        website:"http://www.nps.gov/romo/index.htm",
+        gameID:"_vbngwhegqhc",
+        openForInvite:false,
+        gameAdmin:"sfjdslk23342",
+        friendsInvited: [],
+        sport:"Basketball"
+},
+{
+        name: "Wiggins Town Park",
+        date: new Date (2020, 9, 1),
+        lat: 40.226556025675436,
+        lng: -104.07079875469208,
+        photo: "https://images.unsplash.com/photo-1589422118689-79e01d22de3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+        website: "http://www.nps.gov/romo/index.htm",
+        gameID: "kjj32j023ru9",
+        friendsInvited: [],
+        openForInvite: false,
+        sport: "Football"
 }
 ]
 // 20200809141107
