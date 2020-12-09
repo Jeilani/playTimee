@@ -38,8 +38,8 @@ const LoginScreen = () => {
             return (
             <div className = "loginscreenpopup">
             <p>Hi, this is just a front end demo of Jeilani's playTime app</p>
-            <p>Click the login button with no information needed to checkout the app with preloaded data/use to test its functionality and cool features!</p>
-            <p>Play around as much as you can and give feedback.</p>
+            <p>Click the login button with no information needed to checkout the app with preloaded data/user to test its functionality and cool features!</p>
+            <p>Play around as much as you can and feel free to give me feedback.</p>
             <button onClick={()=>setPopUp(false)}>Cool Beans</button>
             </div>
         )
