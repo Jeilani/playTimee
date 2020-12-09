@@ -37,8 +37,8 @@ const LoginScreen = () => {
         if (popUp) {
             return (
             <div className = "loginscreenpopup">
-            <p>Hi, this is just a front end demo of Jeilani's playTime app</p>
-            <p>Click the login button with no information needed to checkout the app with preloaded data/user to test its functionality and cool features!</p>
+            <p>Hi, this is a front end demo of Jeilani's playTime app</p>
+            <p>Click the login button to checkout the app with preloaded data/user to test its functionality and cool features! No information needed </p>
             <p>Play around as much as you can and feel free to give me feedback.</p>
             <button onClick={()=>setPopUp(false)}>Cool Beans</button>
             </div>
