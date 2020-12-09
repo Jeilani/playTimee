@@ -33,6 +33,33 @@
     color: white;
 }
 
+.loginscreenpopup{
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    background-color: rgba(155, 91, 23, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    width: 50%;
+    text-align: center;
+}
+    .loginscreenpopup button{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: rgb(235, 188, 118);
+        border-radius: 2px;
+        padding: 10px;
+        width: 100px;
+        border: none;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
 .LoginScreen h1, .LoginScreen h2 {
     text-align: center;
     border-radius: 5px;
